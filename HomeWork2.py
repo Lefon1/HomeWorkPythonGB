@@ -5,8 +5,11 @@
 # 6 -> 1  4  1
 # 24 -> 4  16  4
 # 60 -> 10  40  10
-import os  # Делаем чистой консольку
-os.system('cls')
+import os
+if os.name == 'nt':
+    os.system('cls')  # очистить консоль на Windows
+else:
+    os.system('clear')  # очистить консоль на остальных операционных системах
 
 Guravliki = int(input("введите общее количество бумажных журавликов--- "))
 if Guravliki % 2 != 0:

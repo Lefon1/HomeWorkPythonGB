@@ -4,9 +4,12 @@
 # 385916 -> yes
 # 123456 -> no
 
-import os  # Делаем чистой консольку
-os.system('cls')
-
+import os
+if os.name == 'nt':
+    os.system('cls')  # очистить консоль на Windows
+else:
+    os.system('clear')  # очистить консоль на остальных операционных системах
+    
 ticketGold = int(input("Введите номер своего билета: "))
 if ticketGold < 100000 or ticketGold > 999999:# Проверка на 6значность
     print("Номер билета должен состоять из 6 цифр!")
