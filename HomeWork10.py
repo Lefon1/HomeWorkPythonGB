@@ -24,5 +24,5 @@ Bukvar = {'A': 1, 'B': 3, 'C': 3, 'D': 2, 'E': 1, 'F': 4, 'G': 2, 'H': 4, 'I': 1
 # Получаем слово от пользователя и переводим его в верхний регистр
 word = input("Введите слово: ").upper()
 # Считаем сумму значений каждой буквы слова и выводим результат на экран
-score = sum(Bukvar[letter] for letter in word)
+score = sum(Bukvar.get(letter, 0) for letter in word)
 print(score)
